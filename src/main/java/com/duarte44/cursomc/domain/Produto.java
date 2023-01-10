@@ -10,8 +10,7 @@ import lombok.NoArgsConstructor;
 import java.io.Serializable;
 import java.util.*;
 
-@Data
-@NoArgsConstructor
+
 @Entity
 public class Produto implements Serializable {  //serve para q os objetos possam ser gravados em arquivos
     private static final long serialVersion = 1L;
@@ -43,10 +42,56 @@ public class Produto implements Serializable {  //serve para q os objetos possam
         return lista;
     }
 
+    public Produto(){
+
+    }
+
     public Produto(Integer id, String nome, Double preco) {
+        super();
         this.id = id;
         this.nome = nome;
         this.preco = preco;
+    }
+
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public Double getPreco() {
+        return preco;
+    }
+
+    public void setPreco(Double preco) {
+        this.preco = preco;
+    }
+
+    public List<Categoria> getCategorias() {
+        return categorias;
+    }
+
+    public void setCategorias(List<Categoria> categorias) {
+        this.categorias = categorias;
+    }
+
+    public Set<ItemPedido> getItens() {
+        return itens;
+    }
+
+    public void setItens(Set<ItemPedido> itens) {
+        this.itens = itens;
     }
 
     @Override
@@ -61,4 +106,6 @@ public class Produto implements Serializable {  //serve para q os objetos possam
     public int hashCode() {
         return Objects.hash(id);
     }
+
+
 }
