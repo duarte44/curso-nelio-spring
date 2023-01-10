@@ -24,6 +24,8 @@ public class Cliente implements Serializable {  //serve para q os objetos possam
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String nome;
+
+    @Column(unique = true) //chave unica, não se pode repetir o dado
     private String email;
     private String cpfOuCnpj;
     private Integer tipo;
