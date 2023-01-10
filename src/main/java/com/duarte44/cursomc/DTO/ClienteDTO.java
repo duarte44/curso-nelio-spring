@@ -1,6 +1,7 @@
 package com.duarte44.cursomc.DTO;
 
 import com.duarte44.cursomc.domain.Cliente;
+import com.duarte44.cursomc.services.validation.ClienteUpdate;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -14,6 +15,7 @@ import java.io.Serializable;
 
 @Data
 @NoArgsConstructor
+@ClienteUpdate //verifica se quando for fazer update de cliente o email já existe
 public class ClienteDTO implements Serializable {  //serve para q os objetos possam ser gravados em arquivos
     private static final long serialVersion = 1L;
 

@@ -12,7 +12,7 @@ import java.io.Serializable;
 
 @NoArgsConstructor
 @Data
-@ClienteInsert
+@ClienteInsert //verifica se o email já existe quando for inserir um cliente
 public class ClienteNewDto implements Serializable {  //serve para q os objetos possam ser gravados em arquivos
     private static final long serialVersion = 1L;
 
