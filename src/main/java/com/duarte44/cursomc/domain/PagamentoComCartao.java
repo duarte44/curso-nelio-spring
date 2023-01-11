@@ -2,6 +2,7 @@ package com.duarte44.cursomc.domain;
 
 
 import com.duarte44.cursomc.domain.enums.EstadoPagamento;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 import jakarta.persistence.Entity;
 
 import lombok.AllArgsConstructor;
@@ -12,6 +13,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 @Entity
+@JsonTypeName("pagamentoComCartao")
 public class PagamentoComCartao extends Pagamento{
     private static final long serialVersion = 1L;
     private Integer numeroDeParcelas;
